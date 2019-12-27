@@ -1,8 +1,17 @@
-const demoReducer = (oldDemo = null, action) => {
+const demoReducer = (prevState, action) => {
   switch (action.type) {
     case "change demo":
-      return action.newDemo;
+      return action.demo;
     default:
-      return oldDemo;
+      return prevState;
+  }
+};
+
+const testReducer = (prevState, action) => {
+  switch (action.type) {
+    case "update test":
+      return action.test;
+    default:
+      return prevState;
   }
 };
